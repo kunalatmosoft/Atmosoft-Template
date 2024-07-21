@@ -1,4 +1,4 @@
-"use client"
+/* "use client"
 // pages/login.js
 import { useState } from 'react';
 import axios from 'axios';
@@ -41,12 +41,12 @@ export default function Login() {
                 <button type="submit">Login</button>
             </form>
         </div>
-    );
-}
+    ); 
+}*/
 
 
 
-/* import React from 'react'
+import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 const Notifications = () => {
@@ -59,4 +59,4 @@ const Notifications = () => {
   )
 }
 
-export default Notifications */
+export default Notifications 
