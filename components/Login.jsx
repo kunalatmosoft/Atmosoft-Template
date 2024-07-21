@@ -1,27 +1,4 @@
 "use client"
-// pages/index.js
-/* import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-
-export default function Home() {
-    const router = useRouter();
-
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            router.push('/login');
-        }
-    }, [router]);
-
-    return (
-        <div>
-            <h1>Welcome to the Main Page</h1>
-            <button onClick={() => router.push('/Settings')}>Go to Settings</button>
-        </div>
-    );
-}
- */
-
 import React, { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
@@ -38,9 +15,8 @@ const Login = () => {
     <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
       <div className="flex items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6">
-          <p className='text-4xl text-blue-800 font-sans font-semibold '>Atmosoft&trade;👋</p>
           {showSignup ? (
-            <Signup setShowSignup={setShowSignup} />
+            <Signup />
           ) : (
             <>
               <div className="grid gap-2 text-center">
@@ -71,9 +47,9 @@ const Login = () => {
                   </div>
                   <Input id="password" type="password" required />
                 </div>
-                <Link href="/Home"><Button type="submit" className="w-full">
+                <Button type="submit" className="w-full">
                   Login
-                </Button></Link>
+                </Button>
                 <Button variant="outline" className="w-full">
                   Login with Google
                 </Button>
@@ -90,10 +66,10 @@ const Login = () => {
       </div>
       <div className="hidden bg-muted lg:block">
         <Image
-          src="/avatar.png"
-          alt="Atmosoft-avatar"
-          width="520"
-          height="480"
+          src="/Gustin.jpg"
+          alt="Image"
+          width="1920"
+          height="1080"
           className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />
       </div>
